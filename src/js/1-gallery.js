@@ -1,6 +1,6 @@
 import "../css/style.css";
-import simpleLightbox from "simple-lightbox";
-import "simple-lightbox/dist/simpleLightbox.min.css";
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 const images = [
   {
@@ -68,6 +68,8 @@ const images = [
   },
 ];
 
+const gallery = document.querySelector(".gallery");
+
 const renderGallery = (galleryNode, images) => {
   const markup = images
     .map(
@@ -77,7 +79,6 @@ const renderGallery = (galleryNode, images) => {
           <img
             class="gallery-image"
             src="${preview}"
-            data-source="${original}"
             alt="${description}"
           />
         </a>
@@ -89,11 +90,11 @@ const renderGallery = (galleryNode, images) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const gallery = document.querySelector(".gallery");
   renderGallery(gallery, images);
 
-  new simpleLightbox(".gallery a", {
-    captionDelay: 250,
+  // Initialize SimpleLightbox
+  new SimpleLightbox(".gallery a", {
     captionsData: "alt",
+    captionDelay: 250,
   });
 });
