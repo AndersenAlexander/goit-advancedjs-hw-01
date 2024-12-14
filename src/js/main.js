@@ -19,8 +19,6 @@ document.querySelector("#app").innerHTML = `
         <button class="btn">Feedback Form</button>
       </a>
     </div>
-    <p class="read-the-docs">
-      By Alexander Andersen
-    </p>
+    <p class="read-the-docs">By Alexander Andersen</p>
   </div>
 `;
