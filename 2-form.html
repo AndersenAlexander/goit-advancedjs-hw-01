@@ -2,19 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <title>Gallery</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <title>Feedback Form</title>
   </head>
   <body>
     <div id="form-app">
-      <h1>Task 2: Feedback Form</h1>
-      <ul class="form"></ul>
+      <h1>Feedback Form</h1>
+      <form class="feedback-form" autocomplete="off">
+        <label>
+          Email
+          <input type="email" name="email" autofocus />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="8"></textarea>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
       <button class="back-button" onclick="location.href='index.html'">
         Back
       </button>
     </div>
-    <script type="module" src="./js/1-gallery.js"></script>
+    <script type="module" src="/src/js/2-form.js"></script>
   </body>
 </html>
+
